@@ -11,22 +11,27 @@
     edge[dir=black,arrowtail=empty]
 
 
-2730953488032[ label="{LegoModel|}"]
+2412423890032[ label="{LegoModel|}"]
 
-2730953485200[ label="{*ModelElements|}"]
+2412423898528[ label="{*ModelElements|}"]
 
-2730953492752[ label="{ModelImport|name: STRING\l}"]
+2412423894752[ label="{Import|name: STRING\l}"]
 
-2730953487088[ label="{Function|name: STRING\l}"]
+2412423879648[ label="{Function|name: STRING\l}"]
 
-2730953497472[ label="{Part|name: STRING\l}"]
+2412423872096[ label="{Part|name: STRING\l}"]
+
+2412423882480[ label="{Block|}"]
 
 
 
-2730953488032 -> 2730953485200[arrowtail=diamond, dir=both, headlabel="model_elements 0..*"]
-2730953485200 -> 2730953492752 [dir=back]
-2730953485200 -> 2730953487088 [dir=back]
-2730953485200 -> 2730953497472 [dir=back]
+2412423890032 -> 2412423898528[arrowtail=diamond, dir=both, headlabel="model_elements 0..*"]
+2412423898528 -> 2412423894752 [dir=back]
+2412423898528 -> 2412423879648 [dir=back]
+2412423898528 -> 2412423872096 [dir=back]
+2412423898528 -> 2412423882480 [dir=back]
+2412423879648 -> 2412423882480[arrowtail=diamond, dir=both, headlabel="parts 0..*"]
+2412423882480 -> 2412423872096[arrowtail=diamond, dir=both, headlabel="parts 0..*"]
 match_rules [ shape=plaintext, label=< <table>
 	<tr>
 		<td><b>Comment</b></td><td>\/\/.*$</td>

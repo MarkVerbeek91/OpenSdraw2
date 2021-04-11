@@ -4,19 +4,27 @@ LegoModel:
 ;
 
 ModelElements:
-    ModelImport | Function | Part
+    Import | Function | Part | Block
 ;
 
-ModelImport:
-    "ModelImport"  name = STRING
+Import:
+    "(" "import"  name = ID ")"
 ;
 
 Function:
-    "def" name = STRING
+    "(" "def" ID
+        parts*=Block
+     ")"
 ;
 
 Part:
-    "tb" name = STRING
+    "(" "tb" name = STRING ")"
+;
+
+Block:
+    "(" "block"
+        parts*=Part
+     ")"
 ;
 
 Comment:

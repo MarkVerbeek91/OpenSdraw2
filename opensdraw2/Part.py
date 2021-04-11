@@ -1,5 +1,4 @@
 class Part:
-
-    def __init__(self, *args):
-        self.name = args[0]
-        print(self.name)
+    def __init__(self, parent, name):
+        self.parent = parent
+        self.name = name

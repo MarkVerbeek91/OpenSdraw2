@@ -1,2 +1,4 @@
 
-ModelImport 'some'
+( import 'some' )
+( def 'some' )
+( tb 'some' )
