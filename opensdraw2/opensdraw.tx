@@ -1,0 +1,24 @@
+
+LegoModel:
+    model_elements*=ModelElements
+;
+
+ModelElements:
+    ModelImport | Function | Part
+;
+
+ModelImport:
+    "ModelImport"  name = STRING
+;
+
+Function:
+    "def" name = STRING
+;
+
+Part:
+    "tb" name = STRING
+;
+
+Comment:
+  /\/\/.*$/
+;

@@ -1,0 +1,37 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+2730953488032[ label="{LegoModel|}"]
+
+2730953485200[ label="{*ModelElements|}"]
+
+2730953492752[ label="{ModelImport|name: STRING\l}"]
+
+2730953487088[ label="{Function|name: STRING\l}"]
+
+2730953497472[ label="{Part|name: STRING\l}"]
+
+
+
+2730953488032 -> 2730953485200[arrowtail=diamond, dir=both, headlabel="model_elements 0..*"]
+2730953485200 -> 2730953492752 [dir=back]
+2730953485200 -> 2730953487088 [dir=back]
+2730953485200 -> 2730953497472 [dir=back]
+match_rules [ shape=plaintext, label=< <table>
+	<tr>
+		<td><b>Comment</b></td><td>\/\/.*$</td>
+	</tr>
+</table> >]
+
+
+}
