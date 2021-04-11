@@ -27,7 +27,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(1, len(model.model_elements))
 
     def test_single_empty_function(self):
-        file_content = "( def function_name )"
+        file_content = "( def function_name () ( block ) )"
 
         with mock.patch('builtins.open', mock.mock_open(read_data=file_content)):
             model = self.open_sdraw2.load_model(self.test_file_path)
@@ -43,7 +43,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(1, len(model.model_elements))
 
     def test_single_technic_block(self):
-        file_content = "( tb 'some_part' )"
+        file_content = "( tb 1 2 3 0 0 0 'some_part' 4 )"
 
         with mock.patch('builtins.open', mock.mock_open(read_data=file_content)):
             model = self.open_sdraw2.load_model(self.test_file_path)
@@ -51,7 +51,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(1, len(model.model_elements))
 
     def test_single_block_with_one_part(self):
-        file_content = "( block ( tb 'some_part' ) )"
+        file_content = "( block ( tb 1 2 3 0 0 0 'some_part' 4 ) )"
 
         with mock.patch('builtins.open', mock.mock_open(read_data=file_content)):
             model = self.open_sdraw2.load_model(self.test_file_path)
@@ -59,7 +59,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(1, len(model.model_elements))
 
     def test_function_with_block_with_one_part(self):
-        file_content = "( def func ( block ( tb 'some_part' ) ) )"
+        file_content = "( def func () ( block ( tb 1 2 3 0 0 0 'some_part' 4 ) ) )"
 
         with mock.patch('builtins.open', mock.mock_open(read_data=file_content)):
             model = self.open_sdraw2.load_model(self.test_file_path)

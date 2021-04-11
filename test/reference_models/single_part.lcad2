@@ -1,4 +1,4 @@
 
-( import 'some' )
-( def 'some' )
+( import some )
+( def some )
 ( tb 'some' )

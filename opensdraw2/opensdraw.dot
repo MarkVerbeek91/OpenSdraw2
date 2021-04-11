@@ -11,30 +11,33 @@
     edge[dir=black,arrowtail=empty]
 
 
-2412423890032[ label="{LegoModel|}"]
+1192872778656[ label="{LegoModel|}"]
 
-2412423898528[ label="{*ModelElements|}"]
+1192872784320[ label="{*ModelElements|}"]
 
-2412423894752[ label="{Import|name: STRING\l}"]
+1192872768272[ label="{Import|name: ID\l}"]
 
-2412423879648[ label="{Function|name: STRING\l}"]
+1192872759776[ label="{Function|}"]
 
-2412423872096[ label="{Part|name: STRING\l}"]
+1192872782432[ label="{Part|name: STRING\l}"]
 
-2412423882480[ label="{Block|}"]
+1192872757888[ label="{Block|}"]
 
 
 
-2412423890032 -> 2412423898528[arrowtail=diamond, dir=both, headlabel="model_elements 0..*"]
-2412423898528 -> 2412423894752 [dir=back]
-2412423898528 -> 2412423879648 [dir=back]
-2412423898528 -> 2412423872096 [dir=back]
-2412423898528 -> 2412423882480 [dir=back]
-2412423879648 -> 2412423882480[arrowtail=diamond, dir=both, headlabel="parts 0..*"]
-2412423882480 -> 2412423872096[arrowtail=diamond, dir=both, headlabel="parts 0..*"]
+1192872778656 -> 1192872784320[arrowtail=diamond, dir=both, headlabel="model_elements 0..*"]
+1192872784320 -> 1192872768272 [dir=back]
+1192872784320 -> 1192872759776 [dir=back]
+1192872784320 -> 1192872782432 [dir=back]
+1192872784320 -> 1192872757888 [dir=back]
+1192872759776 -> 1192872757888[arrowtail=diamond, dir=both, headlabel="parts 0..*"]
+1192872757888 -> 1192872782432[arrowtail=diamond, dir=both, headlabel="parts 0..*"]
 match_rules [ shape=plaintext, label=< <table>
 	<tr>
 		<td><b>Comment</b></td><td>\/\/.*$</td>
+	</tr>
+	<tr>
+		<td><b>Vector</b></td><td>INT INT INT</td>
 	</tr>
 </table> >]
 

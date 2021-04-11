@@ -1,0 +1,77 @@
+
+LegoModel:
+    model_elements*=ModelElements
+;
+
+ModelElements:
+    Import | Function | Part | Block | MathBlock
+;
+
+Import:
+    "(" "import"  name = ID ")"
+;
+
+Function:
+    "(" "def"
+        name = ID
+        args = Arguments
+        body = FunctionBody
+     ")"
+;
+
+FunctionBody:
+    Block | MathBlock
+;
+
+Arguments:
+    '('
+        args *= ID
+    ')'
+;
+
+Part:
+    "(" "tb"
+        position = PositionVector
+        orientation = RotationVector
+        name = STRING
+        color = INT
+    ")"
+;
+
+Block:
+    "(" "block"
+        parts*=Part
+     ")"
+;
+
+PositionVector:
+    x = NUMBER
+    y = NUMBER
+    z = NUMBER
+;
+
+RotationVector:
+    r_x = NUMBER
+    r_y = NUMBER
+    r_z = NUMBER
+;
+
+MathBlock:
+    Add
+;
+
+// Math
+Add:
+    '(' '+' num1 = Input
+            num2 = Input
+    ')'
+;
+
+Input:
+    NUMBER | ID
+;
+
+
+Comment:
+  /\/\/.*$/
+;
