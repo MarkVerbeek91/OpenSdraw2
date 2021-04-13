@@ -3,22 +3,6 @@ import unittest
 import mock
 
 from opensdraw2.opensdraw2 import OpenSdraw2
-from opensdraw2.Math import Add
-
-
-class TestAddClass(unittest.TestCase):
-
-    def test_add_two_numbers(self):
-        add = Add(None, 1, 2)
-        self.assertEqual(3, add())
-
-    def test_add_two_numbers_one_argument(self):
-        add = Add(None, 1, 'arg')
-        self.assertEqual(3, add(arg=2))
-
-    def test_add_two_numbers_two_arguments(self):
-        add = Add(None, 'foo', 'bar')
-        self.assertEqual(3, add(foo=1, bar=2))
 
 
 class TestOpenSdrawFunction(unittest.TestCase):
@@ -71,5 +55,3 @@ class TestOpenSdrawFunction(unittest.TestCase):
             add_function = model.model_elements[0]
 
         self.assertEqual(3, add_function(arg=2))
-
-

@@ -3,7 +3,6 @@ import unittest
 import mock
 
 from opensdraw2.opensdraw2 import OpenSdraw2
-from opensdraw2.Part import Part
 
 
 class TestPart(unittest.TestCase):

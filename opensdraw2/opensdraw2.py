@@ -2,10 +2,10 @@ import os
 
 from textx import metamodel_from_file
 
-from opensdraw2.Part import Part
-from opensdraw2.Function import Function, Arguments
-from opensdraw2.Vectors import PositionVector, RotationVector
-from opensdraw2.Math import Add
+from opensdraw2.opensdraw2_elements.Part import Part
+from opensdraw2.opensdraw2_elements.Function import Function, Arguments
+from opensdraw2.opensdraw2_elements.Vectors import PositionVector, RotationVector
+from opensdraw2.opensdraw2_elements.Math import Add
 
 opensdraw_classes = [Part, Function, Arguments, PositionVector, RotationVector, Add]
 

@@ -1,8 +1,8 @@
 import unittest
 import mock
 
-from opensdraw2.Function import Function, Arguments
-from opensdraw2.Math import Add
+from opensdraw2.opensdraw2_elements.Function import Function, Arguments
+from opensdraw2.opensdraw2_elements.Math import Add
 
 
 class TestFunction(unittest.TestCase):
