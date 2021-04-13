@@ -65,7 +65,6 @@ class MyTestCase(unittest.TestCase):
             model = self.open_sdraw2.load_model(self.test_file_path)
 
         self.assertEqual(1, len(model.model_elements))
-        print(model)
 
 
 if __name__ == '__main__':

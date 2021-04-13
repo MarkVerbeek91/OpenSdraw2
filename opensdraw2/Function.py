@@ -6,7 +6,8 @@ class Function:
         self.body = body
 
     def __call__(self, *args):
-        return self.body() if len(args) == 0 else self.body({self.args[0]: args})
+        foo = self.args(*args)
+        return self.body(**foo)
 
 
 class Arguments:
@@ -14,5 +15,5 @@ class Arguments:
         self.parent = parent
         self.args = args
 
-    def construct_argument(self, *args):
-        return dict(zip(self.args, args))
+    def __call__(self, *args):
+        return {arg_name: arg_value for arg_name, arg_value in zip(self.args, args)}
