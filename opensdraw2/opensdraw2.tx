@@ -1,5 +1,5 @@
 
-LegoModel:
+Model:
     model_elements*=ModelElements
 ;
 

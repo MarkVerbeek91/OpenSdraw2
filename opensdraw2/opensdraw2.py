@@ -2,12 +2,13 @@ import os
 
 from textx import metamodel_from_file
 
-from opensdraw2.opensdraw2_elements.Part import Part
-from opensdraw2.opensdraw2_elements.Function import Function, Arguments
-from opensdraw2.opensdraw2_elements.Vectors import PositionVector, RotationVector
-from opensdraw2.opensdraw2_elements.Math import Add
+from opensdraw2.Elements.Model import Model
+from opensdraw2.Elements.Part import Part
+from opensdraw2.Elements.Function import Function, Arguments
+from opensdraw2.Elements.Vectors import PositionVector, RotationVector
+from opensdraw2.Elements.Math import Add
 
-opensdraw_classes = [Part, Function, Arguments, PositionVector, RotationVector, Add]
+opensdraw_classes = [Model, Part, Function, Arguments, PositionVector, RotationVector, Add]
 
 
 class OpenSdraw2:
@@ -24,10 +25,6 @@ class OpenSdraw2:
 
         if isinstance(model, str):
             raise EmptyModelError
-
-        for model_element in model.model_elements:
-            if isinstance(model_element, Part):
-                pass
 
         return model
 

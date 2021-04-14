@@ -1,6 +1,6 @@
 import unittest
 
-from opensdraw2.opensdraw2_elements.Math import Add
+from opensdraw2.Elements.Math import Add
 
 
 class TestAddClass(unittest.TestCase):

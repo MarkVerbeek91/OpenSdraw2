@@ -7,7 +7,7 @@ class Part:
         self.color = color
 
     def __repr__(self):
-        return "1 {color} {pos} {ori} {name}".format(color=self.color,
+        return "1 {color} {pos} {ori} {name}\n".format(color=self.color,
                                                      pos=self.get_position_str(),
                                                      ori=self.get_orientation_str(),
                                                      name=self.name)

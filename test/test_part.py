@@ -17,7 +17,7 @@ class TestPart(unittest.TestCase):
             model = self.open_sdraw2.load_model(self.test_file_path)
             part = model.model_elements[0]
 
-        self.assertEqual("1 4 1 2 3 1 0 0 0 1 0 0 0 1 some_part", repr(part))
+        self.assertEqual("1 4 1 2 3 1 0 0 0 1 0 0 0 1 some_part\n", repr(part))
 
     def test_creation_of_a_part_on_a_90_degree_angle(self):
         file_content = "( tb 1 2 3 0 0 90 'some_part' 4 )"
@@ -26,7 +26,7 @@ class TestPart(unittest.TestCase):
             model = self.open_sdraw2.load_model(self.test_file_path)
             part = model.model_elements[0]
 
-        self.assertEqual("1 4 1 2 3 0 -1 0 1 0 0 0 0 1 some_part", repr(part))
+        self.assertEqual("1 4 1 2 3 0 -1 0 1 0 0 0 0 1 some_part\n", repr(part))
 
     def test_creation_of_a_part_on_a_45_degree_angle(self):
         file_content = "( tb 1 2 3 0 45 0 'some_part' 4 )"
@@ -37,7 +37,7 @@ class TestPart(unittest.TestCase):
 
         num = 0.707106781  # sqrt(2)/2
 
-        self.assertEqual("1 4 1 2 3 {n} 0 {n} 0 1 0 -{n} 0 {n} some_part".format(n=num), repr(part))
+        self.assertEqual("1 4 1 2 3 {n} 0 {n} 0 1 0 -{n} 0 {n} some_part\n".format(n=num), repr(part))
 
 
 if __name__ == '__main__':
